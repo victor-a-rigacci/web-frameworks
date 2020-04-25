@@ -42,12 +42,16 @@ blocks:
           - shards install
           - shards build
           - bin/make config --without-sieger
-      jobs:
+      jobs:        
         {{#frameworks}}
         - name: {{{.}}}
           commands:
-            - bin/neph {{{.}}}
-        {{/frameworks}}
+            - bin/neph ${FRAMEWORK} --mode=CI
+          env_vars:
+            - name: FRAMEWORK
+              value: {{{.}}}
+          {{/frameworks}}
       epilogue:
-        - crystal spec
+        commands:
+            - crystal spec
 

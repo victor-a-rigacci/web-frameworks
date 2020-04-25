@@ -298,7 +298,7 @@ class App < Admiral::Command
       config = Crustache.parse(File.read(".ci/template.mustache"))
       File.write(".travis.yml", Crustache.render(config, {"frameworks" => frameworks}))
       config = Crustache.parse(File.read(".semaphore/template.mustache"))
-      File.write(".semaphore/semaphore.yml", Crustache.render(config, {"frameworks" => frameworks}))
+      File.write(".semaphore/semaphore.yml", Crustache.render(config, {"frameworks" => frameworks[0,50]}))
     end
   end
 
