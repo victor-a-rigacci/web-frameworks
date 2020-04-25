@@ -43,9 +43,468 @@ blocks:
           - shards build
           - bin/make config --without-sieger
       jobs:
-        - name: Rails
+        - name: c.agoo-c
+          commands:
+            - bin/neph c.agoo-c
+        - name: c.kore
+          commands:
+            - bin/neph c.kore
+        - name: clojure.coast
+          commands:
+            - bin/neph clojure.coast
+        - name: cpp.drogon
+          commands:
+            - bin/neph cpp.drogon
+        - name: cpp.evhtp
+          commands:
+            - bin/neph cpp.evhtp
+        - name: crystal.amber
+          commands:
+            - bin/neph crystal.amber
+        - name: crystal.athena
+          commands:
+            - bin/neph crystal.athena
+        - name: crystal.kemal
+          commands:
+            - bin/neph crystal.kemal
+        - name: crystal.lucky
+          commands:
+            - bin/neph crystal.lucky
+        - name: crystal.onyx
+          commands:
+            - bin/neph crystal.onyx
+        - name: crystal.orion
+          commands:
+            - bin/neph crystal.orion
+        - name: crystal.router.cr
+          commands:
+            - bin/neph crystal.router.cr
+        - name: crystal.spider-gazelle
+          commands:
+            - bin/neph crystal.spider-gazelle
+        - name: crystal.toro
+          commands:
+            - bin/neph crystal.toro
+        - name: crystal.grip
+          commands:
+            - bin/neph crystal.grip
+        - name: crystal.shivneri
+          commands:
+            - bin/neph crystal.shivneri
+        - name: crystal.ricr
+          commands:
+            - bin/neph crystal.ricr
+        - name: csharp.aspnetcore
+          commands:
+            - bin/neph csharp.aspnetcore
+        - name: elixir.phoenix
+          commands:
+            - bin/neph elixir.phoenix
+        - name: elixir.plug
+          commands:
+            - bin/neph elixir.plug
+        - name: elixir.cowboy
+          commands:
+            - bin/neph elixir.cowboy
+        - name: elixir.cowboy_stream
+          commands:
+            - bin/neph elixir.cowboy_stream
+        - name: fsharp.suave
+          commands:
+            - bin/neph fsharp.suave
+        - name: go.air
+          commands:
+            - bin/neph go.air
+        - name: go.atreugo
+          commands:
+            - bin/neph go.atreugo
+        - name: go.beego
+          commands:
+            - bin/neph go.beego
+        - name: go.chi
+          commands:
+            - bin/neph go.chi
+        - name: go.echo
+          commands:
+            - bin/neph go.echo
+        - name: go.fasthttp
+          commands:
+            - bin/neph go.fasthttp
+        - name: go.fasthttprouter
+          commands:
+            - bin/neph go.fasthttprouter
+        - name: go.gf
+          commands:
+            - bin/neph go.gf
+        - name: go.gin
+          commands:
+            - bin/neph go.gin
+        - name: go.gorilla-mux
+          commands:
+            - bin/neph go.gorilla-mux
+        - name: go.goroute
+          commands:
+            - bin/neph go.goroute
+        - name: go.gorouter-fasthttp
+          commands:
+            - bin/neph go.gorouter-fasthttp
+        - name: go.gorouter
+          commands:
+            - bin/neph go.gorouter
+        - name: go.gramework
+          commands:
+            - bin/neph go.gramework
+        - name: go.kami
+          commands:
+            - bin/neph go.kami
+        - name: go.rte
+          commands:
+            - bin/neph go.rte
+        - name: go.violetear
+          commands:
+            - bin/neph go.violetear
+        - name: go.webgo
+          commands:
+            - bin/neph go.webgo
+        - name: go.mars
+          commands:
+            - bin/neph go.mars
+        - name: go.router
+          commands:
+            - bin/neph go.router
+        - name: go.fiber
+          commands:
+            - bin/neph go.fiber
+        - name: go.tango
+          commands:
+            - bin/neph go.tango
+        - name: go.aero
+          commands:
+            - bin/neph go.aero
+        - name: go.httprouter
+          commands:
+            - bin/neph go.httprouter
+        - name: java.act
+          commands:
+            - bin/neph java.act
+        - name: java.javalin
+          commands:
+            - bin/neph java.javalin
+        - name: java.micronaut
+          commands:
+            - bin/neph java.micronaut
+        - name: java.rapidoid
+          commands:
+            - bin/neph java.rapidoid
+        - name: java.spring-boot
+          commands:
+            - bin/neph java.spring-boot
+        - name: java.jooby
+          commands:
+            - bin/neph java.jooby
+        - name: java.spring-framework
+          commands:
+            - bin/neph java.spring-framework
+        - name: kotlin.ktor
+          commands:
+            - bin/neph kotlin.ktor
+        - name: kotlin.kooby
+          commands:
+            - bin/neph kotlin.kooby
+        - name: nim.httpbeast
+          commands:
+            - bin/neph nim.httpbeast
+        - name: nim.jester
+          commands:
+            - bin/neph nim.jester
+        - name: perl.dancer2
+          commands:
+            - bin/neph perl.dancer2
+        - name: php.basicphp
+          commands:
+            - bin/neph php.basicphp
+        - name: php.hyperf
+          commands:
+            - bin/neph php.hyperf
+        - name: php.imi
+          commands:
+            - bin/neph php.imi
+        - name: php.laravel
+          commands:
+            - bin/neph php.laravel
+        - name: php.lumen
+          commands:
+            - bin/neph php.lumen
+        - name: php.one
+          commands:
+            - bin/neph php.one
+        - name: php.slim
+          commands:
+            - bin/neph php.slim
+        - name: php.spiral
+          commands:
+            - bin/neph php.spiral
+        - name: php.sw-fw-less
+          commands:
+            - bin/neph php.sw-fw-less
+        - name: php.swoft
+          commands:
+            - bin/neph php.swoft
+        - name: php.symfony
+          commands:
+            - bin/neph php.symfony
+        - name: php.one-fpm
+          commands:
+            - bin/neph php.one-fpm
+        - name: php.ubiquity
+          commands:
+            - bin/neph php.ubiquity
+        - name: php.workerman
+          commands:
+            - bin/neph php.workerman
+        - name: php.phalcon
+          commands:
+            - bin/neph php.phalcon
+        - name: php.hamlet
+          commands:
+            - bin/neph php.hamlet
+        - name: php.yii
+          commands:
+            - bin/neph php.yii
+        - name: php.simps
+          commands:
+            - bin/neph php.simps
+        - name: php.laminas
+          commands:
+            - bin/neph php.laminas
+        - name: php.ice
+          commands:
+            - bin/neph php.ice
+        - name: php.mezzio
+          commands:
+            - bin/neph php.mezzio
+        - name: php.chubbyphp
+          commands:
+            - bin/neph php.chubbyphp
+        - name: python.aiohttp
+          commands:
+            - bin/neph python.aiohttp
+        - name: python.asgineer
+          commands:
+            - bin/neph python.asgineer
+        - name: python.blacksheep
+          commands:
+            - bin/neph python.blacksheep
+        - name: python.bottle
+          commands:
+            - bin/neph python.bottle
+        - name: python.cherrypy
+          commands:
+            - bin/neph python.cherrypy
+        - name: python.clastic
+          commands:
+            - bin/neph python.clastic
+        - name: python.cyclone
+          commands:
+            - bin/neph python.cyclone
+        - name: python.django
+          commands:
+            - bin/neph python.django
+        - name: python.falcon
+          commands:
+            - bin/neph python.falcon
+        - name: python.fastapi
+          commands:
+            - bin/neph python.fastapi
+        - name: python.flask
+          commands:
+            - bin/neph python.flask
+        - name: python.hug
+          commands:
+            - bin/neph python.hug
+        - name: python.klein
+          commands:
+            - bin/neph python.klein
+        - name: python.masonite
+          commands:
+            - bin/neph python.masonite
+        - name: python.molten
+          commands:
+            - bin/neph python.molten
+        - name: python.nameko
+          commands:
+            - bin/neph python.nameko
+        - name: python.quart
+          commands:
+            - bin/neph python.quart
+        - name: python.responder
+          commands:
+            - bin/neph python.responder
+        - name: python.sanic
+          commands:
+            - bin/neph python.sanic
+        - name: python.starlette
+          commands:
+            - bin/neph python.starlette
+        - name: python.tornado
+          commands:
+            - bin/neph python.tornado
+        - name: python.apidaora
+          commands:
+            - bin/neph python.apidaora
+        - name: python.pyramid
+          commands:
+            - bin/neph python.pyramid
+        - name: python.emmett
+          commands:
+            - bin/neph python.emmett
+        - name: ruby.agoo
+          commands:
+            - bin/neph ruby.agoo
+        - name: ruby.camping
+          commands:
+            - bin/neph ruby.camping
+        - name: ruby.cuba
+          commands:
+            - bin/neph ruby.cuba
+        - name: ruby.flame
+          commands:
+            - bin/neph ruby.flame
+        - name: ruby.grape
+          commands:
+            - bin/neph ruby.grape
+        - name: ruby.hanami
+          commands:
+            - bin/neph ruby.hanami
+        - name: ruby.rack-routing
+          commands:
+            - bin/neph ruby.rack-routing
+        - name: ruby.rails
           commands:
             - bin/neph ruby.rails
+        - name: ruby.roda
+          commands:
+            - bin/neph ruby.roda
+        - name: ruby.sinatra
+          commands:
+            - bin/neph ruby.sinatra
+        - name: ruby.syro
+          commands:
+            - bin/neph ruby.syro
+        - name: ruby.rack_app
+          commands:
+            - bin/neph ruby.rack_app
+        - name: ruby.hanami-api
+          commands:
+            - bin/neph ruby.hanami-api
+        - name: rust.gotham
+          commands:
+            - bin/neph rust.gotham
+        - name: rust.iron
+          commands:
+            - bin/neph rust.iron
+        - name: rust.nickel
+          commands:
+            - bin/neph rust.nickel
+        - name: rust.actix
+          commands:
+            - bin/neph rust.actix
+        - name: scala.akkahttp
+          commands:
+            - bin/neph scala.akkahttp
+        - name: scala.http4s
+          commands:
+            - bin/neph scala.http4s
+        - name: swift.kitura-nio
+          commands:
+            - bin/neph swift.kitura-nio
+        - name: swift.kitura
+          commands:
+            - bin/neph swift.kitura
+        - name: swift.perfect
+          commands:
+            - bin/neph swift.perfect
+        - name: swift.vapor
+          commands:
+            - bin/neph swift.vapor
+        - name: swift.swifter
+          commands:
+            - bin/neph swift.swifter
+        - name: pony.jennet
+          commands:
+            - bin/neph pony.jennet
+        - name: dart.aqueduct
+          commands:
+            - bin/neph dart.aqueduct
+        - name: javascript.nanoexpress-pro
+          commands:
+            - bin/neph javascript.nanoexpress-pro
+        - name: javascript.feathersjs
+          commands:
+            - bin/neph javascript.feathersjs
+        - name: javascript.sails
+          commands:
+            - bin/neph javascript.sails
+        - name: javascript.nestjs-express
+          commands:
+            - bin/neph javascript.nestjs-express
+        - name: javascript.nestjs-fastify
+          commands:
+            - bin/neph javascript.nestjs-fastify
+        - name: javascript.nanoexpress
+          commands:
+            - bin/neph javascript.nanoexpress
+        - name: javascript.0http
+          commands:
+            - bin/neph javascript.0http
+        - name: javascript.express
+          commands:
+            - bin/neph javascript.express
+        - name: javascript.fastify
+          commands:
+            - bin/neph javascript.fastify
+        - name: javascript.foxify
+          commands:
+            - bin/neph javascript.foxify
+        - name: javascript.hapi
+          commands:
+            - bin/neph javascript.hapi
+        - name: javascript.iotjs-express
+          commands:
+            - bin/neph javascript.iotjs-express
+        - name: javascript.koa
+          commands:
+            - bin/neph javascript.koa
+        - name: javascript.moleculer
+          commands:
+            - bin/neph javascript.moleculer
+        - name: javascript.muneem
+          commands:
+            - bin/neph javascript.muneem
+        - name: javascript.polka
+          commands:
+            - bin/neph javascript.polka
+        - name: javascript.polkadot
+          commands:
+            - bin/neph javascript.polkadot
+        - name: javascript.rayo
+          commands:
+            - bin/neph javascript.rayo
+        - name: javascript.restana
+          commands:
+            - bin/neph javascript.restana
+        - name: javascript.restify
+          commands:
+            - bin/neph javascript.restify
+        - name: javascript.sifrr
+          commands:
+            - bin/neph javascript.sifrr
+        - name: javascript.turbo_polka
+          commands:
+            - bin/neph javascript.turbo_polka
+        - name: julia.merly
+          commands:
+            - bin/neph julia.merly
       epilogue:
         - crystal spec
 

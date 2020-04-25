@@ -278,7 +278,7 @@ class App < Admiral::Command
     end
   end
 
-  class TravisConfig < Admiral::Command
+  class CiConfig < Admiral::Command
     def run
       frameworks = [] of String
       Dir.glob("*/*/config.yaml").each do |file|
@@ -297,6 +297,8 @@ class App < Admiral::Command
       end
       config = Crustache.parse(File.read(".ci/template.mustache"))
       File.write(".travis.yml", Crustache.render(config, {"frameworks" => frameworks}))
+      config = Crustache.parse(File.read(".semaphore/template.mustache"))
+      File.write(".semaphore/semaphore.yml", Crustache.render(config, {"frameworks" => frameworks}))
     end
   end
 
@@ -367,7 +369,7 @@ class App < Admiral::Command
 
   define_help
   register_sub_command config : Config, description "Create framework list"
-  register_sub_command ci_config : TravisConfig, description "Create configuration file for CI"
+  register_sub_command ci_config : CiConfig, description "Create configuration file for CI"
   register_sub_command deps_config : DependabotConfig, description "Create configuration file for deps update bot"
 
   def run
