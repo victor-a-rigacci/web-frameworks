@@ -1,0 +1,51 @@
+version: v1.0
+name: Hello Docker
+
+agent:
+  machine:
+    type: e1-standard-2
+
+  containers:
+    - name: main
+      image: crystallang/crystal
+      env_vars:
+        - name: DATABASE_URL
+          value: postgresql://postgres@db/benchmark
+
+    - name: db
+      image: postgres
+      env_vars:
+        - name: POSTGRES_PASSWORD
+          value: keyboard-cat
+
+blocks:
+  - name: "Setup"
+    task:
+      jobs:
+        - name: Database
+          commands:
+            - apt-get -y update && apt-get -y install postgresql-client
+            - PGPASSWORD="keyboard-cat" createdb -U postgres -h db -p 5432 benchmark
+            - checkout
+            - PGPASSWORD="keyboard-cat" psql -U postgres -h db -d benchmark < .ci/dump.sql
+  - name: "Test"
+    task:
+      prologue:
+        commands:
+          - apt-get -y update
+          - apt-get -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
+          - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
+          - add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+          - apt-get -y update
+          - apt-get -y install docker-ce docker-ce-cli containerd.io
+          - checkout
+          - shards install
+          - shards build
+          - bin/make config --without-sieger
+      jobs:
+        - name: Rails
+          commands:
+            - bin/neph ruby.rails
+      epilogue:
+        - crystal spec
+
