@@ -34,22 +34,22 @@ CURRENT_BRANCH=${TRAVIS_PULL_REQUEST_BRANCH:-$TRAVIS_BRANCH}
 
 if [[ -z ${TRAVIS_PULL_REQUEST_SLUG} ]] ; then
   echo "This is a branch build"
-  exit(0)
+  exit 0
 if
 
 if [[ ${CURRENT_BRANCH} == "master" && !-z ${TRAVIS_PULL_REQUEST_SLUG} ]] ; then
   echo "This is a master build"
-  exit(0)
+  exit 0
 fi
 
 if [[ ${CURRENT_BRANCH} == dependabot* && !-z ${TRAVIS_PULL_REQUEST_SLUG} ]] ; then
   echo "This is a branch from dependabot"
-  exit(1)
+  exit 1
 fi
 
 if [[ ${CURRENT_BRANCH} == renovate* && !-z ${TRAVIS_PULL_REQUEST_SLUG} ]] ; then
   echo "This is a branch from renovate"
-  exit(1)
+  exit 1
 fi
 
 # List of updated files
